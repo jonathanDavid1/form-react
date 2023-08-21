@@ -69,9 +69,9 @@ const UsersForm = ({
             type="text"
             {...register("first_name")}
           />
-          {/* {errors.first_name && (
+          {errors.first_name && (
             <p className="text-red-500 text-xs">{errors.first_name.message}</p>
-          )} */}
+          )}
         </div>
         <div className="grid">
           <label htmlFor="last_name">Last Name</label>

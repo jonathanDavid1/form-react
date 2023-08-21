@@ -64,7 +64,6 @@ function App() {
 
   return (
     <section className="bg-green-200 grid gap-4 min-h-screen">
-      {/* //  The component UserForm has the property fixed for that reason is outside */}
         <UsersForm
           isShowModal={isShowModal}
           createUser={createUser}
