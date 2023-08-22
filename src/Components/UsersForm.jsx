@@ -50,15 +50,18 @@ const UsersForm = ({
         onSubmit={handleSubmit(submit)}
         className="bg-white grid gap-2 p-2 rounded-md h-[550px] w-[300px]"
       >
+        <div className="relative flex">
         <button
           type="button"
           onClick={handleClickCloseModal}
           className="text-red-500 font-bold absolute top-2 right-2 w-6"
-        ><img src="./icons/iconx.png" alt="" />
+        >
+          <img src="./icons/iconx.png" alt="" />
         </button>
-        <h2 className="text-center text-xl">
+        <h2 className="text-center text-xl ml-4 pt-2">
           {isUserToUpdate ? "Edit User" : "New User"}
         </h2>
+        </div>
         <div className="grid">
           <label htmlFor="first_name" className="p-1">First Name</label>
           <input
