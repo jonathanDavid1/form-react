@@ -63,7 +63,7 @@ function App() {
   }, []);
 
   return (
-    <section className="bg-green-200 grid gap-4 min-h-screen">
+    <section className="bg-white grid gap-4 min-h-screen">
         <UsersForm
           isShowModal={isShowModal}
           createUser={createUser}
@@ -71,14 +71,18 @@ function App() {
           updateUser={updateUser}
           setIsShowModal={setIsShowModal}
           setIsUserToUpdate={setIsUserToUpdate}
-          />
-      <header className="flex gap-2 items-center justify-around h-20 mt-6">
-        <h2 className="text-5xl">Users</h2>
+      />
+      <header className="flex gap-x-10 items-center justify-around h-20 mt-6">
+        <h2 className="text-4xl sm:text-5xl">Users</h2>
         <button
           onClick={handleClickOpenModal}
           className="bg-[#555A88] p-2 rounded-md text-white"
         >
-          Create user
+          <div className="object-cover flex items-center gap-2">
+            <img className="w-8 m-l-1" src="./icons/add.png" alt="" />
+            <h3 className="p-2 mr-2">
+          Create user</h3>
+          </div>
         </button>
       </header>
       <main className="grid grid-rows-[auto_auto] place-items-center gap-20 max-w-[1024px] w-full mx-auto ">

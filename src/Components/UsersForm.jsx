@@ -41,11 +41,10 @@ const UsersForm = ({
 
   return (
     <section
-      className={`fixed bg-black/60 top-0 bottom-0 left-0 right-0 flex justify-center items-center transition-[opacity_transform] duration-200 ${
-        isShowModal
+      className={`fixed bg-black/60 top-0 bottom-0 left-0 right-0 flex justify-center items-center transition-[opacity_transform] duration-200 ${isShowModal
           ? "visible opacity-100 scale-100"
           : "invisible opacity-0 scale-0"
-      }`}
+        }`}
     >
       <form
         onSubmit={handleSubmit(submit)}
@@ -54,18 +53,20 @@ const UsersForm = ({
         <button
           type="button"
           onClick={handleClickCloseModal}
-          className="text-red-500 font-bold absolute top-1 right-2"
+          className="text-red-500 font-bold absolute top-2 right-2 w-6"
         >
-          x
+          <img src="./icons/iconx.png" alt="" />
         </button>
-        <h2 className="text-center">
-          {isUserToUpdate ? "Edit User" : "Create user"}
+        <h2 className="text-center text-xl">
+          {isUserToUpdate ? "Edit User" : "New User"}
         </h2>
         <div className="grid">
           <label htmlFor="first_name">First Name</label>
+
           <input
-            className="outline-none border-[1px] border-black p-1"
+            className="outline-none rounded-md border-[1px] border-black p-1"
             id="first_name"
+            placeholder="first name"
             type="text"
             {...register("first_name")}
           />
@@ -76,41 +77,44 @@ const UsersForm = ({
         <div className="grid">
           <label htmlFor="last_name">Last Name</label>
           <input
-            className="outline-none border-[1px] border-black p-1"
+            className="outline-none rounded-md border-[1px] border-black p-1"
             id="last_name"
             type="text"
+            placeholder="last name"
             {...register("last_name")}
           />
         </div>
         <div className="grid">
           <label htmlFor="email">Email</label>
           <input
-            className="outline-none border-[1px] border-black p-1"
+            className="outline-none rounded-md border-[1px] border-black p-1"
             id="email"
             type="text"
+            placeholder="email"
             {...register("email")}
           />
         </div>
         <div className="grid">
           <label htmlFor="password">Password</label>
           <input
-            className="outline-none border-[1px] border-black p-1"
+            className="outline-none rounded-md border-[1px] border-black p-1"
             id="password"
             type="text"
+            placeholder="password"
             {...register("password")}
           />
         </div>
         <div className="grid">
           <label htmlFor="birthday">Birthday</label>
           <input
-            className="outline-none border-[1px] border-black p-1"
+            className="outline-none rounded-md border-[1px] border-black p-1"
             id="birthday"
             type="date"
             {...register("birthday")}
           />
         </div>
-        <button className="bg-black text-white p-2">
-          {isUserToUpdate ? "Save changes" : "Create user"}
+        <button className="bg-[#555A88] text-white p-2 rounded-sm">
+          {isUserToUpdate ? "Save changes" : "Upload"}
         </button>
       </form>
     </section>
