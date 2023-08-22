@@ -42,27 +42,25 @@ const UsersForm = ({
   return (
     <section
       className={`fixed bg-black/60 top-0 bottom-0 left-0 right-0 flex justify-center items-center transition-[opacity_transform] duration-200 ${isShowModal
-          ? "visible opacity-100 scale-100"
-          : "invisible opacity-0 scale-0"
+        ? "visible opacity-100 scale-100"
+        : "invisible opacity-0 scale-0"
         }`}
     >
       <form
         onSubmit={handleSubmit(submit)}
-        className="bg-white grid gap-4 p-2 rounded-md relative"
+        className="bg-white grid gap-2 p-2 rounded-md h-[550px] w-[300px]"
       >
         <button
           type="button"
           onClick={handleClickCloseModal}
           className="text-red-500 font-bold absolute top-2 right-2 w-6"
-        >
-          <img src="./icons/iconx.png" alt="" />
+        ><img src="./icons/iconx.png" alt="" />
         </button>
         <h2 className="text-center text-xl">
           {isUserToUpdate ? "Edit User" : "New User"}
         </h2>
         <div className="grid">
-          <label htmlFor="first_name">First Name</label>
-
+          <label htmlFor="first_name" className="p-1">First Name</label>
           <input
             className="outline-none rounded-md border-[1px] border-black p-1"
             id="first_name"
@@ -75,7 +73,7 @@ const UsersForm = ({
           )}
         </div>
         <div className="grid">
-          <label htmlFor="last_name">Last Name</label>
+          <label htmlFor="last_name" className="p-1">Last Name</label>
           <input
             className="outline-none rounded-md border-[1px] border-black p-1"
             id="last_name"
@@ -85,7 +83,7 @@ const UsersForm = ({
           />
         </div>
         <div className="grid">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email" className="p-1">Email</label>
           <input
             className="outline-none rounded-md border-[1px] border-black p-1"
             id="email"
@@ -95,7 +93,7 @@ const UsersForm = ({
           />
         </div>
         <div className="grid">
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password" className="p-1">Password</label>
           <input
             className="outline-none rounded-md border-[1px] border-black p-1"
             id="password"
@@ -105,7 +103,7 @@ const UsersForm = ({
           />
         </div>
         <div className="grid">
-          <label htmlFor="birthday">Birthday</label>
+          <label htmlFor="birthday" className="p-1">Birthday</label>
           <input
             className="outline-none rounded-md border-[1px] border-black p-1"
             id="birthday"
